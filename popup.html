@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./public/app.css">
+    <title>Model</title>
+</head>
+
+<body class="font-roboto bg-white" onload="onLoadFunction()">
+    <div class="bg-black/50 fixed inset-0 flex justify-center items-center" id="loading">
+        <div class="rounded-[9999px] w-16 h-16 border-4 border-gray-600/70 border-t-gray-200 animate-spin ">
+
+        </div>
+    </div>
+    <button data-lounchModelId="model1"
+        class="px-3 py-2 rounded-md border border-transparent bg-gray-700 hover:bg-gray-800 focus:border-gray-700 focus:ring focus:ring-gray-600 focus:ring-opacity-40 text-white text-sm">
+        <span>Lounch model</span>
+    </button>
+    <button data-lounchModelId="model2"
+        class="px-3 py-2 rounded-md border border-transparent bg-gray-700 hover:bg-gray-800 focus:border-gray-700 focus:ring focus:ring-gray-600 focus:ring-opacity-40 text-white text-sm">
+        <span>Lounch model2</span>
+    </button>
+    <div class="model" id="model1" data-model="true">
+        <div class="model-backdrop fixed inset-0 " style="display: none;">
+        </div>
+        <div class="flex justify-center items-center fixed inset-0" style="display: none;">
+            <div class="model-card bg-white w-[520px] rounded-lg hidden">
+                <div class="h-full w-full">
+                    <header class="flex justify-between items-center pt-4 px-6">
+                        <h1 class="text-xl text-gray-700">Model box</h1>
+                        <button
+                            class="model-close px-2 py-[4px] rounded-lg border border-transparent hover:bg-gray-50 hover:border-gray-200 focus:ring focus:ring-opacity-40 focus:ring-gray-600">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </header>
+                    <div class="model-body py-4 px-6">
+                        <p class="text-gray-600 text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Illo facilis
+                            quod, esse
+                            laborum tenetur in eligendi voluptatibus porro et quisquam necessitatibus sint. Quas quod
+                            vero iste</p>
+                    </div>
+                    <footer class="pb-4 pt-2 px-6">
+                        <div class="flex justify-end items-center space-x-2">
+                            <button
+                                class="px-3 py-2 rounded-md border border-gray-600 bg-transparent hover:bg-gray-800 focus:border-gray-700 focus:ring focus:ring-gray-600 focus:ring-opacity-40 text-gray-600 hover:text-white text-sm">
+                                <span>Cancel
+                                </span>
+                            </button>
+                            <button
+                                class="model-close px-3 py-2 rounded-md border border-transparent bg-gray-700 hover:bg-gray-800 focus:border-gray-700 focus:ring focus:ring-gray-600 focus:ring-opacity-40 text-white text-sm"><span>No,
+                                    thanks</span>
+                            </button>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="model" id="model2" data-model="true">
+        <div class="model-backdrop fixed inset-0 " style="display: none;">
+        </div>
+        <div class="flex justify-center items-center fixed inset-0" style="display: none;">
+            <div class="model-card bg-white w-[520px] rounded-lg hidden">
+                <div class="h-full w-full">
+                    <header class="flex justify-between items-center pt-4 px-6">
+                        <h1 class="text-xl text-gray-700">Model 2</h1>
+                        <button
+                            class="model-close px-2 py-[4px] rounded-lg border border-transparent hover:bg-gray-50 hover:border-gray-200 focus:ring focus:ring-opacity-40 focus:ring-gray-600">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </header>
+                    <div class="model-body py-4 px-6">
+                        <p class="text-gray-600 text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Illo facilis
+                            quod, esse
+                            laborum tenetur in eligendi voluptatibus porro et quisquam necessitatibus sint. Quas quod
+                            vero iste</p>
+                    </div>
+                    <footer class="pb-4 pt-2 px-6">
+                        <div class="flex justify-end items-center space-x-2">
+                            <button
+                                class="px-3 py-2 rounded-md border border-gray-600 bg-transparent hover:bg-gray-800 focus:border-gray-700 focus:ring focus:ring-gray-600 focus:ring-opacity-40 text-gray-600 hover:text-white text-sm">
+                                <span>Cancel
+                                </span>
+                            </button>
+                            <button
+                                class="model-close px-3 py-2 rounded-md border border-transparent bg-gray-700 hover:bg-gray-800 focus:border-gray-700 focus:ring focus:ring-gray-600 focus:ring-opacity-40 text-white text-sm"><span>No,
+                                    thanks</span>
+                            </button>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="popup.js"></script>
+</body>
+
+</html>

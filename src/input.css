@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.__MODEL_ANIM_ENTER {
+    @apply block animate-[MODEL-ENTER_150ms_ease-out] opacity-100;
+}
+
+.__MODEL_ANIM_LEAVE {
+    @apply animate-[MODEL-LEAVE_150ms_ease-in] opacity-0;
+}
+
+.__MODEL_BACKDROP_ANIM_ENTER {
+    @apply bg-black transition-all animate-[MODEL-BACKDROP-ENTER_150ms_ease-out] opacity-40;
+}
+
+.__MODEL_BACKDROP_ANIM_LEAVE {
+    @apply bg-black transition-all animate-[MODEL-BACKDROP-LEAVE_150ms_ease-in] opacity-0;
+}
+
+@keyframes MODEL-ENTER {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes MODEL-LEAVE {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+        transform: translateY(50%);
+    }
+}
+
+@keyframes MODEL-BACKDROP-ENTER {
+    0% {
+        @apply opacity-0;
+    }
+
+    100% {
+        @apply opacity-40;
+    }
+}
+
+@keyframes MODEL-BACKDROP-LEAVE {
+    0% {
+        @apply opacity-40;
+    }
+
+    100% {
+        @apply opacity-0 hidden;
+    }
+}
